@@ -1,0 +1,5 @@
+[
+  { "id": "1", "name": "Alex Dupont", "role": "President candidate", "bio": "Replace with a real bio." },
+  { "id": "2", "name": "Sam Rossi", "role": "Vice-president candidate", "bio": "Replace with a real bio." },
+  { "id": "3", "name": "Jo Martin", "role": "Treasurer candidate", "bio": "Replace with a real bio." }
+]

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>CArtnaval</title>
+      <meta name="description" content="Campagne Bureau Des Arts 2026 - CArtNaval" />
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+      <div class="scene" aria-hidden="true">
+        <canvas id="sceneCanvas"></canvas>
+        <div class="scene-loading" id="sceneLoading">Loading scenery… <span id="loadPct">0</span>%</div>
+      </div>
+
+      <div class="nav-wrapper">
+        <header class="nav-pill" id="navPill">
+          <button type="button" id="logoBtn" class="nav-logo">Our Campaign</button>
+          <ul class="nav-links">
+            <li><a href="#program">Program</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#command">Commander</a></li>
+          </ul>
+        </header>
+      </div>
+
+      <main>
+        <section id="top" class="hero">
+          <div class="hero-blob" aria-hidden="true"></div>
+          <div class="hero-content reveal">
+            <p class="eyebrow">Campagne BDA 2026</p>
+            <p class="pitch">
+              Replace this with your pitch: who you are, what your team stands
+              for, and why people should vote for your list.
+            </p>
+            <div class="cta-row">
+              <a href="#program" class="btn btn-solid">Discover the program</a>
+              <a href="#command" class="btn btn-outline">Get in touch</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="program" class="section">
+          <div class="container">
+            <div class="reveal">
+              <h2>Our program</h2>
+              <p class="muted">Three pillars to replace with your actual platform.</p>
+            </div>
+            <div class="grid-3">
+              <div class="card reveal">
+                <h3>Student life</h3>
+                <p class="muted">Placeholder: describe the events, clubs, or facilities you want to improve.</p>
+              </div>
+              <div class="card reveal">
+                <h3>Transparency</h3>
+                <p class="muted">Placeholder: describe how the association's budget and decisions will be shared.</p>
+              </div>
+              <div class="card reveal">
+                <h3>Well-being</h3>
+                <p class="muted">Placeholder: describe initiatives around mental health, support, and inclusion.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="team" class="section">
+          <div class="container">
+            <div class="reveal">
+              <h2>The team</h2>
+              <p class="muted" id="teamStatus">Loading…</p>
+            </div>
+            <div class="grid-3" id="teamGrid"></div>
+          </div>
+        </section>
+
+        <section id="events" class="section">
+          <div class="container">
+            <div class="reveal">
+              <h2>Evénements</h2>
+              <p class="muted" id="eventsStatus">Chargement…</p>
+            </div>
+            <ol class="timeline" id="eventsList"></ol>
+          </div>
+        </section>
+
+        <section id="command" class="section">
+          <div class="container container-narrow">
+            <div class="reveal">
+              <h2>Get in touch</h2>
+              <p class="muted">Veux-tu manger ?</p>
+            </div>
+            <form id="commandForm" class="reveal form">
+              <input name="first_name" placeholder="Prénom" required />
+              <input name="last_name" placeholder="Nom" required />
+              <textarea name="residence" placeholder="Résidence" required rows="4"></textarea>
+              <textarea name="room_number" placeholder="Numéro de chambre" required rows="4"></textarea>
+              <textarea name="phone_number" placeholder="Numéro de téléphone" required rows="4"></textarea>
+              <textarea name="food" placeholder="Plat souhaité" required rows="4"></textarea>
+
+              <p class="fine-print">
+                Ces informations ne seront pas partagées avec des tiers et seront détruites après la campagne.
+                Nous ne les utiliserons que pour préparer les repas.
+              </p>
+
+              <button type="submit" class="btn btn-solid" id="submitBtn">Commander</button>
+              <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        &copy; <span id="year"></span> Our Campaign — built with a plain index.html, CSS &amp; Rust.
+      </footer>
+
+      <script src="script.js"></script>
+    </body>
+</html>
